@@ -1,7 +1,7 @@
 # HyperFace
 
 This project is based on the well implemented [arcface-tf2](https://github.com/peteryuX/arcface-tf2).
-we modify above code in order to improve the performance of face recognition 
+we modify the code in order to improve the performance of face recognition. 
 
 ### Training the Model
 For preparing data, follow the instructions provided in  [data-preparing](https://github.com/peteryuX/arcface-tf2#data-preparing)
@@ -39,6 +39,14 @@ We implemented MnasNet models looking at the [official code](https://github.com/
 * [ArcFace](https://openaccess.thecvf.com/content_CVPR_2019/html/Deng_ArcFace_Additive_Angular_Margin_Loss_for_Deep_Face_Recognition_CVPR_2019_paper.html)
 * [CosFace](https://openaccess.thecvf.com/content_cvpr_2018/html/Wang_CosFace_Large_Margin_CVPR_2018_paper.html)
 * [SphereFace](https://openaccess.thecvf.com/content_cvpr_2017/papers/Liu_SphereFace_Deep_Hypersphere_CVPR_2017_paper.pdf)
+
+##### Loss Function
+###### Modifying Model
+* Nonlinear projection head
+* changing margin and scaling parameter
+* implement regularization - Early stopping & Learning rate scheduling
+* Apply curriculum learning on Head part
+* Apply adaptive scaling on Head part
 ##### Configuration
 in the [TensorFlow ArcFace.ipynb](https://github.com/joonb14/JHFace/blob/main/TensorFlow%20ArcFace.ipynb), we provided simple configuration values. To change the model backbone, just change the backbone_type parameter. To change the loss function, just change the head_type parameter.
 ```python
