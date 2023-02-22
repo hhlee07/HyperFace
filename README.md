@@ -1,7 +1,7 @@
 # HyperFace
 
 This project is based on the well implemented [arcface-tf2](https://github.com/peteryuX/arcface-tf2).
-The things that rise error when converting the model to tflite was changed.
+we modify above code in order to improve the performance of face recognition 
 
 ### Training the Model
 For preparing data, follow the instructions provided in  [data-preparing](https://github.com/peteryuX/arcface-tf2#data-preparing)
@@ -27,7 +27,6 @@ NasNet case, because of this [issue](https://github.com/keras-team/keras-applica
 * EfficientNetB0 ~ B7
 
 ##### Backbones w/o ImageNet pretrained weights:
-
 
 We implemented MnasNet models looking at the [official code](https://github.com/tensorflow/tpu/blob/master/models/official/mnasnet/mnasnet_model.py). If there's a bug, please tell us through the github issue page!
 
